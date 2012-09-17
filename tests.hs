@@ -5,9 +5,10 @@ module Tests where
 import Language.Fay.FFI
 import Language.Fay.Prelude
 import Language.Fay.Three
+import Language.Fay.JQuery
 
 main :: Fay ()
-main = do
+main = ready $ do
   cam <- mkPerspectiveCamera 75 1.333 1 10000
   scene <- mkScene
   r <- mkCanvasRenderer
